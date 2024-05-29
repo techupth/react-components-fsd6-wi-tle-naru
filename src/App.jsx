@@ -7,6 +7,31 @@ function App() {
         Todo: 1 ให้ Declare ตัว Component ย่อย 
        เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <header> 
       */}
+      <Header />
+
+      {/*
+        Todo 2: ให้ Declare ตัว Component ย่อย
+        เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <main> 
+      */}
+      <MainContent />
+
+      {/*
+        Todo 3: ให้ Declare ตัว Component ย่อย
+        เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <section className="product-section"> 
+      */}
+      <Section />
+
+      {/*
+        Todo 4: ให้ Declare ตัว Component ย่อย
+        เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <footer> 
+      */}
+      <Footer />
+    </div>
+  );
+}
+function Header() {
+  return (
+    <>
       <header>
         <nav>
           <div className="logo">🚀 XYZ CORP</div>
@@ -26,11 +51,12 @@ function App() {
           </ul>
         </nav>
       </header>
-
-      {/*
-        Todo 2: ให้ Declare ตัว Component ย่อย
-        เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <main> 
-      */}
+    </>
+  );
+}
+function MainContent() {
+  return (
+    <>
       <main>
         <div className="company-detail-left">
           <h1>Welcome to XYZ Corp</h1>
@@ -60,11 +86,12 @@ function App() {
           <button className="learn-button">Learn More</button>
         </div>
       </main>
-
-      {/*
-        Todo 3: ให้ Declare ตัว Component ย่อย
-        เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <section className="product-section"> 
-      */}
+    </>
+  );
+}
+function Section() {
+  return (
+    <>
       <section className="product-section">
         <div className="product-section-container">
           <h2 className="product-featured-heading">Featured Products</h2>
@@ -85,7 +112,7 @@ function App() {
                 ให้เปลี่ยน Style ของปุ่ม “Add to Card” แก้ไข className ใน Component `Button` ที่สร้างขึ้นมา
                 จาก “add-to-cart-button” เป็น “add-to-cart-button-secondary”
               */}
-              <button className="add-to-cart-button">Add to Cart</button>
+              <ButtonAddToCart />
             </div>
             <div className="product-card">
               <img
@@ -95,7 +122,7 @@ function App() {
               <h3>Classic Leather Watch</h3>
               <p className="product-price">4,000 Baht</p>
               {/* Todo 5: (จุดที่ 2) */}
-              <button className="add-to-cart-button">Add to Cart</button>
+              <ButtonAddToCart />
             </div>
             <div className="product-card">
               <img
@@ -105,21 +132,30 @@ function App() {
               <h3>Organic Green Tea</h3>
               <p className="product-price">79.99 Baht</p>
               {/* Todo 5: (จุดที่ 3) */}
-              <button className="add-to-cart-button">Add to Cart</button>
+              <ButtonAddToCart />
             </div>
           </div>
         </div>
       </section>
-
-      {/*
-        Todo 4: ให้ Declare ตัว Component ย่อย
-        เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <footer> 
-      */}
+    </>
+  );
+}
+function Footer() {
+  return (
+    <>
       <footer>
         <p>&copy; 2023 Your Ecommerce Store. All rights reserved.</p>
       </footer>
-    </div>
+    </>
   );
+}
+function ButtonAddToCart() {
+  /*
+ Todo 6: หลังกจากทำ Todo 5 เสร็จ
+  ให้เปลี่ยน Style ของปุ่ม “Add to Card” แก้ไข className ใน Component `Button` ที่สร้างขึ้นมา
+  จาก “add-to-cart-button” เป็น “add-to-cart-button-secondary”
+  */
+  return <button className="add-to-cart-button-secondary">Add to Cart</button>;
 }
 
 export default App;
